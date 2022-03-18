@@ -3,8 +3,12 @@ const express = require("express");
 const conexion = require("./database/db");
 const router = require("./controlador/productos")
 const app  = express()
+const cors = require('cors')
+
+
 
 // MIDDELEWARE
+app.use(cors())
 app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 app.use("/api", router)
