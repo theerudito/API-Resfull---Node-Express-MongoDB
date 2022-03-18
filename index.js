@@ -5,8 +5,6 @@ const router = require("./controlador/productos")
 const app  = express()
 const cors = require('cors')
 
-
-
 // MIDDELEWARE
 app.use(cors())
 app.use(express.urlencoded({extended:true}))
